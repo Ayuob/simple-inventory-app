@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20230613060157",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "purchase_order_line",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PurchaseOrderLine",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "purchaseOrder",
+      "otherEntityRelationshipName": "purchaseOrderLine",
+      "relationshipName": "purchaseOrder",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "productName",
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "purchaseOrderLine",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

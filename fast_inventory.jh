@@ -63,15 +63,6 @@ relationship ManyToOne {
     PurchaseOrderLine{product(productName)} to Product{purchaseOrderLine}
 }
 
-relationship OneToMany {
-    Category{product(productName)} to Product{category(categoryDescription)},
-    Customer{order} to Order{customer(company)},
-    Order{orderLine} to OrderLine{order},
-    Supplier{purchaseOrder} to PurchaseOrder{supplier(supplierName)},
-    PurchaseOrder{purchaseOrderLine} to PurchaseOrderLine{purchaseOrder},
-    Product{orderLine} to OrderLine{product(productName)},
-    Product{purchaseOrderLine} to PurchaseOrderLine{product(productName)}
-}
 
 paginate all with pagination
 dto all with mapstruct

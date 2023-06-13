@@ -7,6 +7,14 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "الكيانات",
+        "category": "Category",
+        "product": "Product",
+        "customer": "Customer",
+        "order": "Order",
+        "orderLine": "Order Line",
+        "supplier": "Supplier",
+        "purchaseOrder": "Purchase Order",
+        "purchaseOrderLine": "Purchase Order Line",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
