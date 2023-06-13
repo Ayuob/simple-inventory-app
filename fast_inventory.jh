@@ -6,13 +6,13 @@ entity Category {
 }
 
 entity Product {
-    sku          String id,
+    sku          String required,
     productName  String required,
-    size         Integer,
+    productSize         Integer,
     price        BigDecimal required
 }
 relationship ManyToOne {
-    Product{category(categoryDescription)} to Category{roduct(productName)}
+    Product{category(categoryDescription)} to Category{product(productName)}
 }
 
 entity Customer {
@@ -27,7 +27,7 @@ entity Order {
     orderDate  Instant
 }
 relationship ManyToOne {
-    Order{customer(company)} to Customer{orders}
+    Order{customer(company)} to Customer{order}
 }
 
 entity OrderLine {
@@ -51,7 +51,7 @@ entity PurchaseOrder {
     orderDate       Instant
 }
 relationship ManyToOne {
-    PurchaseOrder{supplier(supplierName)} to Supplier{purchaseOrders}
+    PurchaseOrder{supplier(supplierName)} to Supplier{purchaseOrder}
 }
 
 entity PurchaseOrderLine {
@@ -59,7 +59,7 @@ entity PurchaseOrderLine {
     price          BigDecimal
 }
 relationship ManyToOne {
-    PurchaseOrderLine{purchase} to PurchaseOrder{purchaseOrderLine},
+    PurchaseOrderLine{purchaseOrder} to PurchaseOrder{purchaseOrderLine},
     PurchaseOrderLine{product(productName)} to Product{purchaseOrderLine}
 }
 
@@ -68,7 +68,7 @@ relationship OneToMany {
     Customer{order} to Order{customer(company)},
     Order{orderLine} to OrderLine{order},
     Supplier{purchaseOrder} to PurchaseOrder{supplier(supplierName)},
-    PurchaseOrder{orderLine} to PurchaseOrderLine{purchase},
+    PurchaseOrder{purchaseOrderLine} to PurchaseOrderLine{purchaseOrder},
     Product{orderLine} to OrderLine{product(productName)},
     Product{purchaseOrderLine} to PurchaseOrderLine{product(productName)}
 }
