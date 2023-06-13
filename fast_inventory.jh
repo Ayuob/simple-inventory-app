@@ -1,136 +1,78 @@
-application {
-    config {
-        baseName qubitinventory
-        applicationType monolith
-        packageName ly.qubit.inventory
-        authenticationType jwt
-        databaseType sql
-        devDatabaseType postgresql
-        prodDatabaseType postgresql
-        cacheProvider no
-        enableHibernateCache false
-        buildTool maven
-        clientFramework angularX
-        enableTranslation true
-        nativeLanguage en
-        languages [en, ar-ly]
-        serverPort 8080
-        testFrameworks [cypress]
-        jhiPrefix jhi
-    }
-}
 
 entity Category {
-    category_id          Integer required,
-    category_description String,
-    product_line         String
+    categoryId          Integer required,
+    categoryDescription String,
+    productLine         String
 }
 
 entity Product {
-    sku          String required,
-    product_name String required,
+    sku          String id,
+    productName  String required,
     size         Integer,
-    price        Decimal required,
-    category     Category
+    price        BigDecimal required
+}
+relationship ManyToOne {
+    Product{category(categoryDescription)} to Category{roduct(productName)}
 }
 
 entity Customer {
-    customer_id String required,
+    customerId  String required,
     company     String,
     address     String,
     city        String,
-    state       String,
-    zip         String,
-    newsletter  Boolean
+    state       String
 }
 
 entity Order {
-    order_date LocalDate,
-    customer   Customer
+    orderDate  Instant
+}
+relationship ManyToOne {
+    Order{customer(company)} to Customer{orders}
 }
 
 entity OrderLine {
-    quantity Integer,
-    order    Order,
-    product  Product
+    quantity  Integer,
+    price     BigDecimal
+}
+relationship ManyToOne {
+    OrderLine{order} to Order{orderLine},
+    OrderLine{product(productName)} to Product{orderLine}
 }
 
 entity Supplier {
-    supplier_name   String,
-    address         String,
-    city            String,
-    contact_email   String,
-    contact_phone   String
+    supplierName   String,
+    address        String,
+    city           String,
+    contactEmail   String,
+    contactPhone   String
 }
 
 entity PurchaseOrder {
-    order_date     LocalDate,
-    supplier       Supplier,
-    status         String,
-    total_quantity Integer,
-    total_amount   Decimal
+    orderDate       Instant
+}
+relationship ManyToOne {
+    PurchaseOrder{supplier(supplierName)} to Supplier{purchaseOrders}
 }
 
 entity PurchaseOrderLine {
-    quantity    Integer,
-    price       Decimal,
-    total_amount Decimal,
-    purchase    PurchaseOrder,
-    product     Product
+    quantity       Integer,
+    price          BigDecimal
+}
+relationship ManyToOne {
+    PurchaseOrderLine{purchase} to PurchaseOrder{purchaseOrderLine},
+    PurchaseOrderLine{product(productName)} to Product{purchaseOrderLine}
 }
 
 relationship OneToMany {
-    Category{product} to Product{category}
-    Customer{order} to Order{customer}
-    Order{orderLine} to OrderLine{order}
-    Supplier{purchaseOrder} to PurchaseOrder{supplier}
-    PurchaseOrder{orderLine} to PurchaseOrderLine{purchase}
-    Product{orderLine} to OrderLine{product}
-    Product{purchaseOrderLine} to PurchaseOrderLine{product}
+    Category{product(productName)} to Product{category(categoryDescription)},
+    Customer{order} to Order{customer(company)},
+    Order{orderLine} to OrderLine{order},
+    Supplier{purchaseOrder} to PurchaseOrder{supplier(supplierName)},
+    PurchaseOrder{orderLine} to PurchaseOrderLine{purchase},
+    Product{orderLine} to OrderLine{product(productName)},
+    Product{purchaseOrderLine} to PurchaseOrderLine{product(productName)}
 }
 
 paginate all with pagination
 dto all with mapstruct
 service all with serviceImpl
-search all
-
-// REST API endpoints
-// Get all purchase orders
-@GetMapping("/api/purchases/orders")
-ResponseEntity<List<PurchaseOrder>> getAllPurchaseOrders();
-
-// Get purchase order by ID
-@GetMapping("/api/purchases/orders/{orderId}")
-ResponseEntity<PurchaseOrder> getPurchaseOrder(@PathVariable Integer orderId);
-
-// Create a new purchase order
-@PostMapping("/api/purchases/orders")
-ResponseEntity<PurchaseOrder> createPurchaseOrder(@RequestBody PurchaseOrder purchaseOrder);
-
-// Update purchase order details
-@PutMapping("/api/purchases/orders/{orderId}")
-ResponseEntity<PurchaseOrder> updatePurchaseOrder(@PathVariable Integer orderId, @RequestBody PurchaseOrder purchaseOrder);
-
-// Delete a purchase order
-@DeleteMapping("/api/purchases/orders/{orderId}")
-ResponseEntity<Void> deletePurchaseOrder(@PathVariable Integer orderId);
-
-// Get all purchase order lines
-@GetMapping("/api/purchases/orders/{orderId}/lines")
-ResponseEntity<List<PurchaseOrderLine>> getAllPurchaseOrderLines(@PathVariable Integer orderId);
-
-// Get purchase order line by ID
-@GetMapping("/api/purchases/orders/{orderId}/lines/{lineId}")
-ResponseEntity<PurchaseOrderLine> getPurchaseOrderLine(@PathVariable Integer orderId, @PathVariable Integer lineId);
-
-// Add a new purchase order line
-@PostMapping("/api/purchases/orders/{orderId}/lines")
-ResponseEntity<PurchaseOrderLine> addPurchaseOrderLine(@PathVariable Integer orderId, @RequestBody PurchaseOrderLine purchaseOrderLine);
-
-// Update purchase order line details
-@PutMapping("/api/purchases/orders/{orderId}/lines/{lineId}")
-ResponseEntity<PurchaseOrderLine> updatePurchaseOrderLine(@PathVariable Integer orderId, @PathVariable Integer lineId, @RequestBody PurchaseOrderLine purchaseOrderLine);
-
-// Delete a purchase order line
-@DeleteMapping("/api/purchases/orders/{orderId}/lines/{lineId}")
-ResponseEntity<Void> deletePurchaseOrderLine(@PathVariable Integer orderId, @PathVariable Integer lineId);
