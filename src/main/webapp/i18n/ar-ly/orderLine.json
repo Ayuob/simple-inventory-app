@@ -2,10 +2,10 @@
   "jhipsterSampleApplicationApp": {
     "orderLine": {
       "home": {
-        "title": "صنف اذن الدخول",
+        "title": "صنف اذن صرف",
         "refreshListLabel": "تحديث القائمة",
         "createLabel": "اضافة صنف",
-        "createOrEditLabel": "تعديل صنف",
+        "createOrEditLabel": "انشاء او تعديل  صنف",
         "notFound": "لا يوجد اصناف"
       },
       "created": "تم انشاء صنف جديد  {{ param }}",
@@ -15,12 +15,12 @@
         "question": "هل انت متأكد من عملية الحذف  {{ id }}?"
       },
       "detail": {
-        "title": "صنف اذن الدخول "
+        "title": "صنف اذن الصرف "
       },
       "id": "ID",
       "quantity": "الكمية",
       "price": "السعر",
-      "order": "رقم اذن الدخول",
+      "order": "رقم اذن الرف",
       "product": "المنتج"
     }
   }

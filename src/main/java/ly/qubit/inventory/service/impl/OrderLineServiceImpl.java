@@ -1,5 +1,6 @@
 package ly.qubit.inventory.service.impl;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 import ly.qubit.inventory.domain.OrderLine;
 import ly.qubit.inventory.repository.OrderLineRepository;
@@ -35,6 +36,7 @@ public class OrderLineServiceImpl implements OrderLineService {
     public OrderLineDTO save(OrderLineDTO orderLineDTO) {
         log.debug("Request to save OrderLine : {}", orderLineDTO);
         OrderLine orderLine = orderLineMapper.toEntity(orderLineDTO);
+        orderLine.setPrice(orderLine.getProduct().getPrice().multiply(BigDecimal.valueOf(orderLine.getQuantity())));
         orderLine = orderLineRepository.save(orderLine);
         return orderLineMapper.toDto(orderLine);
     }

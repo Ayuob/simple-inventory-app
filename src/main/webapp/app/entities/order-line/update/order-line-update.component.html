@@ -22,7 +22,7 @@
           <input type="number" class="form-control" name="quantity" id="field_quantity" data-cy="quantity" formControlName="quantity" />
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
           <label class="form-label" jhiTranslate="jhipsterSampleApplicationApp.orderLine.price" for="field_price">Price</label>
           <input type="number" class="form-control" name="price" id="field_price" data-cy="price" formControlName="price" />
         </div>
