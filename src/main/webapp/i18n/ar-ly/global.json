@@ -9,7 +9,7 @@
         "main": "الكيانات",
         "category": "مجموعة الصنف",
         "product": "الصنف",
-        "customer": "الزبون",
+        "customer": "العميل",
         "order": "اذن صرف",
         "orderLine": "صنف اذن صرف",
         "supplier": "مورد",
@@ -150,5 +150,5 @@
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
     }
   },
-  "footer": "كل الحقوق محفوظة"
+  "footer": "كل الحقوق محفوظة 2023"
 }
