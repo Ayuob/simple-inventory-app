@@ -2,28 +2,28 @@
   "jhipsterSampleApplicationApp": {
     "product": {
       "home": {
-        "title": "Products",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Product",
-        "createOrEditLabel": "Create or edit a Product",
-        "notFound": "No Products found"
+        "title": "الاصناف",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "انشاء صنف جديد",
+        "createOrEditLabel": "تعديل المنتج",
+        "notFound": "لا يوجد منتجات"
       },
-      "created": "A new Product is created with identifier {{ param }}",
-      "updated": "A Product is updated with identifier {{ param }}",
-      "deleted": "A Product is deleted with identifier {{ param }}",
+      "created": "تم انشاء صنف جديد {{ param }}",
+      "updated": "تم تعديل الصنف  {{ param }}",
+      "deleted": "تم حذف الصنف  {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Product {{ id }}?"
+        "question": " هل انت متأكد من عملية الحذف {{ id }}?"
       },
       "detail": {
-        "title": "Product"
+        "title": "الصنف"
       },
       "id": "ID",
       "sku": "Sku",
-      "productName": "Product Name",
-      "productSize": "Product Size",
-      "price": "Price",
-      "category": "Category",
-      "orderLine": "Order Line",
+      "productName": "اسم الصنف",
+      "productSize": "سعة المحرك",
+      "price": "السعر",
+      "category": "الفئة",
+      "orderLine": "الرف",
       "purchaseOrderLine": "Purchase Order Line"
     }
   }

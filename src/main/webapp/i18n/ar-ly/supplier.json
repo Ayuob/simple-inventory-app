@@ -2,28 +2,28 @@
   "jhipsterSampleApplicationApp": {
     "supplier": {
       "home": {
-        "title": "Suppliers",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Supplier",
-        "createOrEditLabel": "Create or edit a Supplier",
-        "notFound": "No Suppliers found"
+        "title": "الموردين",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "انشاء مورد جديد ",
+        "createOrEditLabel": "تعديل او ا ضافة مورد",
+        "notFound": "لا يوجد بيانات"
       },
-      "created": "A new Supplier is created with identifier {{ param }}",
-      "updated": "A Supplier is updated with identifier {{ param }}",
-      "deleted": "A Supplier is deleted with identifier {{ param }}",
+      "created": "تم انشاء مورد جديد {{ param }}",
+      "updated": "تم تحديث بيانات المورد {{ param }}",
+      "deleted": "تم حذف بيانات المورد {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Supplier {{ id }}?"
+        "question": " هل انت متأكد من عملية الحذف  {{ id }}?"
       },
       "detail": {
-        "title": "Supplier"
+        "title": "المورد"
       },
       "id": "ID",
-      "supplierName": "Supplier Name",
-      "address": "Address",
-      "city": "City",
-      "contactEmail": "Contact Email",
-      "contactPhone": "Contact Phone",
-      "purchaseOrder": "Purchase Order"
+      "supplierName": "اسم امورد",
+      "address": "العنوان",
+      "city": "المدينة",
+      "contactEmail": "البريد الالكتروني",
+      "contactPhone": "رقم الهاتف",
+      "purchaseOrder": "طلبات الدخول"
     }
   }
 }

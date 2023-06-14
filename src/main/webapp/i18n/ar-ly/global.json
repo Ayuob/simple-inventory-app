@@ -1,20 +1,20 @@
 {
   "global": {
-    "title": "JhipsterSampleApplication",
+    "title": "منظومة المخزن",
     "browsehappy": "أنت تستخدم متصفح <strong>قديم</strong> . من فضلك <a href=\"http://browsehappy.com/?locale=en\">قم بتحديث متصفحك</a> لتحسين تجربتك.",
     "menu": {
       "home": "الصفحة الرئيسية",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "الكيانات",
-        "category": "Category",
-        "product": "Product",
-        "customer": "Customer",
-        "order": "Order",
-        "orderLine": "Order Line",
-        "supplier": "Supplier",
-        "purchaseOrder": "Purchase Order",
-        "purchaseOrderLine": "Purchase Order Line",
+        "category": "مجموعة الصنف",
+        "product": "الصنف",
+        "customer": "الزبون",
+        "order": "اذن صرف",
+        "orderLine": "صنف اذن صرف",
+        "supplier": "مورد",
+        "purchaseOrder": "اذن دخول",
+        "purchaseOrderLine": "صنف اذن الدخول",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -150,5 +150,5 @@
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
     }
   },
-  "footer": "هنا يضع الفووتر"
+  "footer": "كل الحقوق محفوظة"
 }

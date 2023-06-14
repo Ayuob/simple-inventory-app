@@ -2,24 +2,24 @@
   "jhipsterSampleApplicationApp": {
     "purchaseOrder": {
       "home": {
-        "title": "Purchase Orders",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Purchase Order",
-        "createOrEditLabel": "Create or edit a Purchase Order",
-        "notFound": "No Purchase Orders found"
+        "title": "اذن دخول",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "انشاء اذن دخول ",
+        "createOrEditLabel": "انشاء او تعديل اذن دخول",
+        "notFound": " موجودة لا اذونات دخول"
       },
-      "created": "A new Purchase Order is created with identifier {{ param }}",
-      "updated": "A Purchase Order is updated with identifier {{ param }}",
-      "deleted": "A Purchase Order is deleted with identifier {{ param }}",
+      "created": "تم انشاء اذن دخول  {{ param }}",
+      "updated": "تم تحديث اذن دخول  {{ param }}",
+      "deleted": "تم حذف اذن دخول {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Purchase Order {{ id }}?"
+        "question": "هل انت متأكد من الحذف {{ id }}?"
       },
       "detail": {
-        "title": "Purchase Order"
+        "title": "ان دخول "
       },
       "id": "ID",
-      "orderDate": "Order Date",
-      "supplier": "Supplier",
+      "orderDate": "تاريخ الطلب",
+      "supplier": "المورد",
       "purchaseOrderLine": "Purchase Order Line"
     }
   }

@@ -2,25 +2,25 @@
   "jhipsterSampleApplicationApp": {
     "order": {
       "home": {
-        "title": "Orders",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Order",
-        "createOrEditLabel": "Create or edit a Order",
-        "notFound": "No Orders found"
+        "title": "اذونات الصرف",
+        "refreshListLabel": "تحديث",
+        "createLabel": "انشاء اذن صرف",
+        "createOrEditLabel": "انشاء او تعديل اذن صرف",
+        "notFound": "لا يوجد اذونات"
       },
-      "created": "A new Order is created with identifier {{ param }}",
-      "updated": "A Order is updated with identifier {{ param }}",
-      "deleted": "A Order is deleted with identifier {{ param }}",
+      "created": "تم انشاء اذن صرف برقم   {{ param }}",
+      "updated": "تم تحديث اذن صرف برقم {{ param }}",
+      "deleted": "تم حذف اذن صرف رقم {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Order {{ id }}?"
+        "question": "خل انت متأكد من الحذف {{ id }}?"
       },
       "detail": {
-        "title": "Order"
+        "title": "اذن صرف"
       },
-      "id": "ID",
-      "orderDate": "Order Date",
-      "customer": "Customer",
-      "orderLine": "Order Line"
+      "id": "رقم",
+      "orderDate": "تاريخ الطلب",
+      "customer": "الزبون",
+      "orderLine": "صنف الطلب"
     }
   }
 }

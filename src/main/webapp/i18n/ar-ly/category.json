@@ -2,24 +2,24 @@
   "jhipsterSampleApplicationApp": {
     "category": {
       "home": {
-        "title": "Categories",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Category",
-        "createOrEditLabel": "Create or edit a Category",
-        "notFound": "No Categories found"
+        "title": "مجموعات الصنف",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "انشاء مجموعة جديدة",
+        "createOrEditLabel": "انشاء او تعديل مجموعة",
+        "notFound": "لا يوجد مجموعات"
       },
-      "created": "A new Category is created with identifier {{ param }}",
-      "updated": "A Category is updated with identifier {{ param }}",
-      "deleted": "A Category is deleted with identifier {{ param }}",
+      "created": "تم انشاء المجموعة {{ param }}",
+      "updated": "تم تحديث المجموعة {{ param }}",
+      "deleted": "تم حذف المجموعة {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Category {{ id }}?"
+        "question": "هل انت متأكد من عملية الحذف {{ id }}?"
       },
       "detail": {
-        "title": "Category"
+        "title": "مجموعة الصنف"
       },
       "id": "ID",
-      "categoryId": "Category Id",
-      "categoryDescription": "Category Description",
+      "categoryId": "رقم المجموعة",
+      "categoryDescription": "وصف المجموعة",
       "productLine": "Product Line",
       "product": "Product"
     }

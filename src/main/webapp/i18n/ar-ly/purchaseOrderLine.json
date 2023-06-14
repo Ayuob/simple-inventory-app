@@ -2,26 +2,26 @@
   "jhipsterSampleApplicationApp": {
     "purchaseOrderLine": {
       "home": {
-        "title": "Purchase Order Lines",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Purchase Order Line",
-        "createOrEditLabel": "Create or edit a Purchase Order Line",
+        "title": "اصناف اذن الدخول",
+        "refreshListLabel": "تحديث القائمة ",
+        "createLabel": "انشاء صنف دخول",
+        "createOrEditLabel": "انشاء او تعديل صنف اذن الدخول ",
         "notFound": "No Purchase Order Lines found"
       },
-      "created": "A new Purchase Order Line is created with identifier {{ param }}",
-      "updated": "A Purchase Order Line is updated with identifier {{ param }}",
-      "deleted": "A Purchase Order Line is deleted with identifier {{ param }}",
+      "created": "تم اذافة الصنف  {{ param }}",
+      "updated": " تم تحديث الصنف {{ param }}",
+      "deleted": " تم حذف الصنف {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Purchase Order Line {{ id }}?"
+        "question": "هل انت متأكد من حذف صنف الدخول  {{ id }}?"
       },
       "detail": {
-        "title": "Purchase Order Line"
+        "title": "صنف اذن الدخول"
       },
       "id": "ID",
-      "quantity": "Quantity",
-      "price": "Price",
-      "purchaseOrder": "Purchase Order",
-      "product": "Product"
+      "quantity": "الكمية",
+      "price": "السعر",
+      "purchaseOrder": "اذن الدخول",
+      "product": "المنتج"
     }
   }
 }

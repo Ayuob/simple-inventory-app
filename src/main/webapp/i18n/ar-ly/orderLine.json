@@ -2,26 +2,26 @@
   "jhipsterSampleApplicationApp": {
     "orderLine": {
       "home": {
-        "title": "Order Lines",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Order Line",
-        "createOrEditLabel": "Create or edit a Order Line",
-        "notFound": "No Order Lines found"
+        "title": "صنف اذن الدخول",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "اضافة صنف",
+        "createOrEditLabel": "تعديل صنف",
+        "notFound": "لا يوجد اصناف"
       },
-      "created": "A new Order Line is created with identifier {{ param }}",
-      "updated": "A Order Line is updated with identifier {{ param }}",
-      "deleted": "A Order Line is deleted with identifier {{ param }}",
+      "created": "تم انشاء صنف جديد  {{ param }}",
+      "updated": "تم تحديث صنف الدخول {{ param }}",
+      "deleted": "تم حذف الصنف {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Order Line {{ id }}?"
+        "question": "هل انت متأكد من عملية الحذف  {{ id }}?"
       },
       "detail": {
-        "title": "Order Line"
+        "title": "صنف اذن الدخول "
       },
       "id": "ID",
-      "quantity": "Quantity",
-      "price": "Price",
-      "order": "Order",
-      "product": "Product"
+      "quantity": "الكمية",
+      "price": "السعر",
+      "order": "رقم اذن الدخول",
+      "product": "المنتج"
     }
   }
 }
