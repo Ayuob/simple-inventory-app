@@ -12,4 +12,17 @@ services:
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
+      - 127.0.0.1:5433:5432
+
+  jhipstersampleapplication-postgresql-no-faker:
+    image: postgres:14.5
+    # volumes:
+    #   - ~/volumes/jhipster/jhipsterSampleApplication/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=jhipsterSampleApplication
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
       - 127.0.0.1:5432:5432
