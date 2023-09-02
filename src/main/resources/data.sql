@@ -83,15 +83,26 @@ values  (1302, 50, 2347750.00, 1, 2),
         (1311, 30, 18000.00, 4, 8),
         (1312, 5, 234775.00, 1, 2);
 
-insert into public.jhi_user (id, login, password_hash, first_name, last_name, email, image_url, activated, lang_key, activation_key, reset_key, created_by, created_date, reset_date, last_modified_by, last_modified_date)
-values  (1, 'admin', '$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC', 'Administrator', 'Administrator', 'admin@localhost', '', true, 'en', null, null, 'system', null, null, 'system', null),
-        (2, 'user', '$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K', 'User', 'User', 'user@localhost', '', true, 'en', null, null, 'system', null, null, 'system', null);
-
-insert into public.jhi_authority (name)
-values  ('ROLE_ADMIN'),
-        ('ROLE_USER');
-
-insert into public.jhi_user_authority (user_id, authority_name)
-values  (1, 'ROLE_ADMIN'),
-        (1, 'ROLE_USER'),
-        (2, 'ROLE_USER');
+-- insert into public.jhi_user (id, login, password_hash, first_name, last_name, email, image_url, activated, lang_key, activation_key, reset_key, created_by, created_date, reset_date, last_modified_by, last_modified_date)
+-- values  (1, 'admin', '$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC', 'Administrator', 'Administrator', 'admin@localhost', '', true, 'en', null, null, 'system', null, null, 'system', null),
+--         (2, 'user', '$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K', 'User', 'User', 'user@localhost', '', true, 'en', null, null, 'system', null, null, 'system', null);
+--
+-- insert into public.jhi_authority (name)
+-- values  ('ROLE_ADMIN'),
+--         ('ROLE_USER');
+--
+-- insert into public.jhi_user_authority (user_id, authority_name)
+-- values  (1, 'ROLE_ADMIN'),
+--         (1, 'ROLE_USER'),
+--         (2, 'ROLE_USER');
+-- insert into public.category (id, category_id, category_description, product_line)
+-- values  (1, 100, 'شاشة', 'المستودع الشمالي'),
+--         (2, 1001, 'مكيف', 'المستودع الشمالي'),
+--         (3, 1003, 'فريزر', 'مستودع أ'),
+--         (4, 1004, 'ثلاجة', 'المستودع الجنوبي'),
+--         (5, 41287, 'غسالة صحون', 'مستودع ب'),
+--         (6, 1005, 'مجفف', 'مستودع قطع الغيار'),
+--         (7, 92416, 'غسالة ملابس', 'مستودع قطع الغيار'),
+--         (8, 3006, 'ميكروويف', 'مستودع المنزلية'),
+--         (9, 3007, 'منزلية', 'مستودع المنزلية'),
+--         (10, 36302, 'فرن', 'مستودع المنزلية');
